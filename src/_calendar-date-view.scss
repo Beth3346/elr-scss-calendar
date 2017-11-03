@@ -1,0 +1,58 @@
+@mixin elr-calendar-date-view($config: ()) {
+    $config: extend((
+        border-radius: 3px,
+        secondary-color: $light-grey
+    ), $config);
+
+    $border-radius: map-get($config, border-radius);
+    $secondary-color: map-get($config, secondary-color);
+
+    margin: to-rems(20px) auto;
+    padding: to-rems(10px) to-rems(20px);
+    width: 80%;
+    border: 1px solid $secondary-color;
+    border-radius: $border-radius;
+
+    .elr-calendar-header {
+        text-align: center;
+    }
+
+    .elr-day {
+        @include elr-unstyled-list(
+            $config: (
+                align: left
+            )
+        );
+
+        .hour,
+        .time {
+            font-size: to-rems(12px);
+            color: $grey;
+            font-weight: $bold;
+            display: block;
+        }
+
+        li {
+            padding: to-rems(10px) to-rems(5px) 0;
+            border-bottom: 1px solid $secondary-color;
+        }
+    }
+
+    .elr-events {
+        padding: to-rems(5px) 0 to-rems(5px) to-rems(20px);
+        font-weight: 500;
+
+        .time {
+            padding-right: to-rems(5px);
+        }
+
+        li {
+            padding: 0;
+            border-bottom: 0;
+        }
+
+        .elr-event {
+            font-size: to-rems(14px);
+        }
+    }
+}

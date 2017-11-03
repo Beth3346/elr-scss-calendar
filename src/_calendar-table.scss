@@ -1,0 +1,128 @@
+// scss-lint:disable ImportantRule
+
+@mixin elr-calendar-table($config: ()) {
+    $config: extend((
+        border-radius: 3px,
+        main-color: $dark-grey,
+        secondary-color: $light-grey,
+        text-color: $dark-grey,
+        background-color: $white,
+        holiday-color: $green
+    ), $config);
+
+    $border-radius: map-get($config, border-radius);
+    $main-color: map-get($config, main-color);
+    $secondary-color: map-get($config, secondary-color);
+    $text-color: map-get($config, text-color);
+    $background-color: map-get($config, background-color);
+    $holiday-color: map-get($config, holiday-color);
+
+    width: 100%;
+
+    .button-solid-radius {
+        font-size: to-rems(14px);
+        width: 200px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    th,
+    td {
+        background-color: $background-color;
+        padding: 10px;
+        width: (100% / 7);
+    }
+
+    th {
+        font-size: to-rems(14px);
+        height: auto;
+        text-align: center;
+        color: $grey;
+        line-height: 1.2;
+    }
+
+    tr:first-child {
+        td:first-child {
+            border-radius: $border-radius 0 0;
+        }
+
+        td:last-child {
+            border-radius: 0 $border-radius 0 0;
+        }
+    }
+
+    tr:last-child {
+        td { border-bottom: 1px solid $lighter-grey; }
+
+        td:first-child {
+            border-radius: 0 0 0 $border-radius;
+        }
+
+        td:last-child {
+            border-radius: 0 0 $border-radius;
+        }
+    }
+
+    td {
+        font-size: to-rems(14px);
+        border-top: 1px solid $lighter-grey;
+        border-left: 1px solid $lighter-grey;
+        color: $text-color;
+
+        &:last-child {
+            border-right: 1px solid $lighter-grey;
+        }
+    }
+
+    td:hover {
+        background-color: rgba($main-color, .7);
+        color: $background-color;
+        cursor: pointer;
+
+        a,
+        .elr-hour,
+        .elr-time {
+            color: $background-color;
+        }
+    }
+
+    .elr-events {
+        a,
+        .elr-hour,
+        .elr-time {
+            color: $background-color;
+        }
+    }
+
+    .elr-cal-today {
+        background-color: $main-color !important;
+        color: $background-color !important;
+    }
+
+    .elr-cal-weekend {
+        background-color: $lightest-grey;
+        color: $text-color;
+    }
+
+    .elr-cal-holiday {
+        color: $holiday-color;
+    }
+
+    .elr-cal-muted {
+        background-color: $lighter-grey;
+        color: $background-color;
+
+        &:hover {
+            cursor: not-allowed;
+            background-color: $lighter-grey;
+
+            .elr-events a {
+                color: $background-color;
+            }
+        }
+    }
+}

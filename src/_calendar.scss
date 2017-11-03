@@ -1,0 +1,103 @@
+// TODO: Refactor!!
+
+@import 'calendar-date-view';
+@import 'calendar-events';
+@import 'calendar-header';
+@import 'calendar-table';
+@import 'calendar-week-view';
+
+@mixin elr-calendar($config: ()) {
+    $config: extend((
+        border-radius: 3px,
+        main-color: $elr-blue,
+        secondary-color: $light-grey,
+        text-color: $dark-grey,
+        background-color: $white,
+        holiday-color: $green
+    ), $config);
+
+    $border-radius: map-get($config, border-radius);
+    $main-color: map-get($config, main-color);
+    $secondary-color: map-get($config, secondary-color);
+    $text-color: map-get($config, text-color);
+    $background-color: map-get($config, background-color);
+    $holiday-color: map-get($config, holiday-color);
+
+    button { margin: to-rems(10) 0; }
+
+    .elr-calendar-header {
+        @include elr-calendar-header($config: (secondary-color: $text-color));
+    }
+
+    .elr-calendar-nav,
+    .elr-calendar-view-nav {
+        @include elr-button-group($config: ($border-radius: 3px));
+        margin: to-rems(10px) 0;
+
+        button { font-size: to-rems(14px); }
+    }
+
+    .elr-calendar-select {
+        @include elr-inline-form;
+    }
+
+    .elr-calendar-new-event {
+        @include elr-tabular-form;
+    }
+
+    .elr-calendar {
+        @include elr-calendar-table($config: (
+                border-radius: $border-radius,
+                main-color: $main-color,
+                secondary-color: $secondary-color,
+                text-color: $text-color,
+                background-color: $background-color,
+                holiday-color: $holiday-color
+            )
+        );
+    }
+
+    .elr-events {
+        @include elr-events(
+            $config: (
+                text-color: $text-color,
+                holiday-color: $holiday-color
+            )
+        );
+    }
+
+    .elr-calendar-month-view {
+        td {
+            height: to-rems(100px);
+        }
+    }
+
+    .elr-calendar-week-view {
+        @include elr-calendar-week-view(
+            $config: (
+                background-color: $background-color
+            )
+        );
+    }
+
+    .elr-calendar-date-view {
+        @include elr-calendar-date-view(
+        $config: (
+                border-radius: $border-radius,
+                secondary-color: $secondary-color
+            )
+        );
+    }
+
+    .elr-calendar-event-details {
+        @include elr-calendar-event-details(
+            $config: (
+                background-color: $background-color
+            )
+        );
+    }
+
+    .elr-calendar-event-edit {
+        @include elr-tabular-form;
+    }
+}

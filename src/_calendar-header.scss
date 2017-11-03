@@ -1,0 +1,12 @@
+@mixin elr-calendar-header($config: ()) {
+    $config: extend((
+        secondary-color: $light-grey
+    ), $config);
+
+    $secondary-color: map-get($config, secondary-color);
+
+    font-size: to-rems(32px);
+    color: $darker-grey;
+    font-weight: $bold;
+    border-bottom: 1px solid $secondary-color;
+}

@@ -1,0 +1,52 @@
+@mixin elr-calendar-week-view($config: ()) {
+    $config: extend((
+        background-color: $white
+    ), $config);
+
+    $background-color: map-get($config, background-color);
+
+    margin: to-rems(20px) 0;
+    width: 100%;
+
+    .elr-calendar-header {
+        text-align: center;
+    }
+
+    th,
+    td {
+        background-color: $background-color;
+        padding: to-rems(5px) to-rems(10px);
+        width: (100% / 8);
+    }
+
+    th {
+        height: auto;
+        text-align: center;
+        color: $grey;
+    }
+
+    tbody {
+        border: 1px solid $lighter-grey;
+    }
+
+    tr:first-child {
+        td {
+            border-top: 1px solid $lighter-grey;
+        }
+    }
+
+    td {
+        font-size: to-rems(14px);
+        border-left: 1px solid $lighter-grey;
+        border-bottom: 0;
+
+        &:last-child {
+            border-right: 1px solid $lighter-grey;
+        }
+    }
+
+    .hour {
+        font-size: to-rems(12px);
+        color: $grey;
+    }
+}
