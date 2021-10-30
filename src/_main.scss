@@ -1,4 +1,5 @@
-@import 'node_modules/elr-scss-functions/main';
+@use "sass.math";
+@import "node_modules/elr-scss-functions/main";
 
 @mixin elr-calendar($config: ()) {
   $config: extend(
@@ -8,7 +9,7 @@
       secondary-color: #ccc,
       text-color: #333,
       background-color: #fff,
-      holiday-color: #7aba7b
+      holiday-color: #7aba7b,
     ),
     $config
   );
@@ -27,7 +28,7 @@
   .elr-calendar-header {
     @include elr-calendar-header(
       $config: (
-        secondary-color: $text-color
+        secondary-color: $text-color,
       )
     );
   }
@@ -57,7 +58,7 @@
         secondary-color: $secondary-color,
         text-color: $text-color,
         background-color: $background-color,
-        holiday-color: $holiday-color
+        holiday-color: $holiday-color,
       )
     );
   }
@@ -66,7 +67,7 @@
     @include elr-events(
       $config: (
         text-color: $text-color,
-        holiday-color: $holiday-color
+        holiday-color: $holiday-color,
       )
     );
   }
@@ -80,7 +81,7 @@
   .elr-calendar-week-view {
     @include elr-calendar-week-view(
       $config: (
-        background-color: $background-color
+        background-color: $background-color,
       )
     );
   }
@@ -89,7 +90,7 @@
     @include elr-calendar-date-view(
       $config: (
         border-radius: $border-radius,
-        secondary-color: $secondary-color
+        secondary-color: $secondary-color,
       )
     );
   }
@@ -97,7 +98,7 @@
   .elr-calendar-event-details {
     @include elr-calendar-event-details(
       $config: (
-        background-color: $background-color
+        background-color: $background-color,
       )
     );
   }
@@ -110,7 +111,7 @@
 @mixin elr-calendar-week-view($config: ()) {
   $config: extend(
     (
-      background-color: #fff
+      background-color: #fff,
     ),
     $config
   );
@@ -128,7 +129,7 @@
   .elr-day {
     background-color: $background-color;
     padding: 5px 10px;
-    width: (100% / 8);
+    width: math.div(100%, 8);
   }
 
   th {
@@ -173,7 +174,7 @@
       secondary-color: #ccc,
       text-color: #333,
       background-color: #fff,
-      holiday-color: #7aba7b
+      holiday-color: #7aba7b,
     ),
     $config
   );
@@ -198,7 +199,7 @@
   .elr-day {
     background-color: $background-color;
     padding: 10px;
-    width: (100% / 7);
+    width: math.div(100%, 7);
   }
 
   th {
@@ -306,7 +307,7 @@
 @mixin elr-calendar-header($config: ()) {
   $config: extend(
     (
-      secondary-color: #ccc
+      secondary-color: #ccc,
     ),
     $config
   );
@@ -323,7 +324,7 @@
   $config: extend(
     (
       text-color: #333,
-      holiday-color: #7aba7b
+      holiday-color: #7aba7b,
     ),
     $config
   );
@@ -370,7 +371,7 @@
 @mixin elr-calendar-event-details($config: ()) {
   $config: extend(
     (
-      background-color: #fff
+      background-color: #fff,
     ),
     $config
   );
@@ -403,7 +404,7 @@
   $config: extend(
     (
       border-radius: 3px,
-      secondary-color: #ccc
+      secondary-color: #ccc,
     ),
     $config
   );
