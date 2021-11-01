@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "node_modules/elr-scss-functions/main";
+@import "elr-scss-functions/src/main";
 
 @mixin elr-calendar($config: ()) {
   $config: extend(
