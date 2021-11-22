@@ -1,15 +1,16 @@
 @use "sass:math";
 @import "elr-scss-functions/src/main";
+@import "elr-scss-config/src/main";
 
 @mixin elr-calendar($config: ()) {
   $config: extend(
     (
       border-radius: 3px,
-      main-color: #1daaf0,
-      secondary-color: #ccc,
-      text-color: #333,
-      background-color: #fff,
-      holiday-color: #7aba7b,
+      main-color: $primary-color,
+      secondary-color: $light-gray,
+      text-color: $text-color,
+      background-color: $white,
+      holiday-color: $secondary-color,
     ),
     $config
   );
