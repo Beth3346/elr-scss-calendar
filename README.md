@@ -14,6 +14,18 @@ npm install elr-scss-calendar --save
 yarn add elr-scss-calendar
 ```
 
+## Implementation
+
+### Scss
+
+```scss
+.calendar {
+  @include elr-calendar;
+}
+```
+
+### HTML
+
 ## License
 
 SEE LICENSE IN LICENSE.md
