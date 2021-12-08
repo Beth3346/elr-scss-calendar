@@ -1,5 +1,7 @@
-# elr-scss-calendar
+# Calendar
 
+[![npm version](http://img.shields.io/npm/v/elr-scss-calendar.svg)](https://www.npmjs.org/package/elr-scss-calendar)
+[![Build Status](https://github.com/elr-scss-calendar/workflows/CI/badge.svg)](https://github.com/elr-scss-calendar/actions?workflow=CI)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-calendar.svg?style=flat)](https://npmjs.com/package/elr-scss-calendar)
 
@@ -10,7 +12,12 @@ a scss mixin for elr-scss-calendar
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
 
 ```sh
-npm install elr-scss-calendar --save
+npm install elr-scss-calendar
+```
+
+or
+
+```sh
 yarn add elr-scss-calendar
 ```
 
