@@ -4,8 +4,11 @@
 [![CI](https://github.com/Beth3346/elr-scss-calendar/actions/workflows/node.js.yml/badge.svg)](https://github.com/Beth3346/elr-scss-calendar/actions/workflows/node.js.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-calendar.svg?style=flat)](https://npmjs.com/package/elr-scss-calendar)
+[![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-calendar.svg)](https://github.com/Beth3346/elr-scss-calendar)
 
 a scss mixin for elr-scss-calendar
+
+[View Demo](https://elr-scss-calendar.netlify.app/)
 
 ## Installation
 
