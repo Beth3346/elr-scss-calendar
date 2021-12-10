@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-calendar.svg?style=flat)](https://npmjs.com/package/elr-scss-calendar)
 [![last commit](https://img.shields.io/github/last-commit/Beth3346/elr-scss-calendar.svg)](https://github.com/Beth3346/elr-scss-calendar)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2e215a49-09cc-4114-a945-725ddedb0368/deploy-status)](https://app.netlify.com/sites/elr-calendar/deploys)
 
 a scss mixin for elr-scss-calendar
 
