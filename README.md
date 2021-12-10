@@ -8,7 +8,7 @@
 
 a scss mixin for elr-scss-calendar
 
-[View Demo](https://elr-scss-calendar.netlify.app/)
+[View Demo](https://elr-calendar.netlify.app/)
 
 ## Installation
 
